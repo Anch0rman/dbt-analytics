@@ -4,4 +4,4 @@ select
 from
     {{ ref('stg_stripe__payment') }}
 group by 1
-having sum(payment_amount) < 0
+having total_amount < 0
